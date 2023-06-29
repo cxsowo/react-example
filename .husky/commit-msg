@@ -1,0 +1,16 @@
+#!/bin/sh
+
+commit_msg=`cat $1`
+msg_re="^(feat|fix|docs|style|refactor|perf|test|workflow|build|ci|chore|release|workflow)(\(.+\))?: .{1,100}"
+
+if [[ ! $commit_msg =~ $msg_re ]]
+then
+	echo -e "\033[31m \nIllegal commit message, commit message like：\
+	\nfeat: add comments\
+	\nfix: handle events on blur (close #28)\
+  \nstart with feat|fix|docs|style|refactor|perf|test|workflow|build|ci|chore|release|workflow
+  \033[0m"
+
+	# error exit
+	exit 1
+fi

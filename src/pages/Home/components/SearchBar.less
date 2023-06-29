@@ -1,0 +1,35 @@
+@import '~styles/mixins.less';
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    filter: blur(10px);
+    z-index: -1;
+  }
+
+  .input {
+    flex: 1;
+    height: 46px;
+    background: rgba(255, 255, 255, 1);
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+  }
+
+  .search-button {
+    .h2-font();
+
+    height: 100%;
+    width: 56px;
+    flex: 0;
+  }
+}
