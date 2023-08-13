@@ -1,0 +1,75 @@
+@import '~styles/variables';
+@import '~styles/mixins';
+
+html,
+body,
+:global(#root) {
+  --nextui--navbarFloatingMargin: 0;
+  --nextui-colors-backgroundContrast: #eee;
+  --nextui--cardColor: #eee;
+
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+    sans-serif Outfit, sans-serif;
+  font-weight: normal;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  position: relative;
+  word-break: break-all;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+  @media @mobiles {
+    font-size: 16px;
+  }
+}
+
+html,
+body {
+  background-color: @primary-background-color;
+  * {
+    box-sizing: border-box;
+  }
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    width: 0.7rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: @primary-background-color;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e9b8e2;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+      inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 0.7rem;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ec8cde;
+  }
+
+  input {
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    &:focus {
+      border: none;
+    }
+  }
+
+  button {
+    &:focus,
+    &:focus-visible {
+      border: none;
+    }
+  }
+}

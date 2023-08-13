@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-bottom: 100px;
+  .chatList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chatInputContainer {
+    position: fixed;
+    bottom: 20px;
+    max-width: 1200px;
+    left: auto;
+    right: auto;
+    width: 100%;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .button {
+      margin-left: 10px;
+      flex: 0;
+    }
+  }
+}
